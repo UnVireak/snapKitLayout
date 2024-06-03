@@ -13,6 +13,9 @@
 		0423F0ED2C0DDC8D005A5EE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0423F0EC2C0DDC8D005A5EE9 /* Base */; };
 		0423F0EF2C0DDC8F005A5EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0423F0EE2C0DDC8F005A5EE9 /* Assets.xcassets */; };
 		0423F0F22C0DDC8F005A5EE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0423F0F12C0DDC8F005A5EE9 /* Base */; };
+		0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */; };
+		0423F0FC2C0DE9A7005A5EE9 /* SignupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */; };
+		A1EF4D121106204F1EDF435E /* Pods_snapKitLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		0423F0EE2C0DDC8F005A5EE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0423F0F12C0DDC8F005A5EE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0423F0F32C0DDC8F005A5EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginScreenViewController.swift; sourceTree = "<group>"; };
+		0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenViewController.swift; sourceTree = "<group>"; };
+		3C834D5F7A1C91AD59B1E33E /* Pods-snapKitLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snapKitLayout.debug.xcconfig"; path = "Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snapKitLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A0AC66C0E3C7790E9E44D2 /* Pods-snapKitLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snapKitLayout.release.xcconfig"; path = "Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EF4D121106204F1EDF435E /* Pods_snapKitLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				0423F0E42C0DDC8D005A5EE9 /* snapKitLayout */,
 				0423F0E32C0DDC8D005A5EE9 /* Products */,
+				4B54E6FA32BC1AE7B3E60389 /* Pods */,
+				B68F912FB5CF8C99325EA4EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,27 @@
 				0423F0EE2C0DDC8F005A5EE9 /* Assets.xcassets */,
 				0423F0F02C0DDC8F005A5EE9 /* LaunchScreen.storyboard */,
 				0423F0F32C0DDC8F005A5EE9 /* Info.plist */,
+				0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */,
+				0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */,
 			);
 			path = snapKitLayout;
+			sourceTree = "<group>";
+		};
+		4B54E6FA32BC1AE7B3E60389 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C834D5F7A1C91AD59B1E33E /* Pods-snapKitLayout.debug.xcconfig */,
+				E4A0AC66C0E3C7790E9E44D2 /* Pods-snapKitLayout.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B68F912FB5CF8C99325EA4EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0423F0F62C0DDC8F005A5EE9 /* Build configuration list for PBXNativeTarget "snapKitLayout" */;
 			buildPhases = (
+				ADEFB11806076CBFDAE722D3 /* [CP] Check Pods Manifest.lock */,
 				0423F0DE2C0DDC8D005A5EE9 /* Sources */,
 				0423F0DF2C0DDC8D005A5EE9 /* Frameworks */,
 				0423F0E02C0DDC8D005A5EE9 /* Resources */,
+				E50A2EB523D67D6354DC096B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +165,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ADEFB11806076CBFDAE722D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-snapKitLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E50A2EB523D67D6354DC096B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0423F0DE2C0DDC8D005A5EE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +215,8 @@
 				0423F0EA2C0DDC8D005A5EE9 /* ViewController.swift in Sources */,
 				0423F0E62C0DDC8D005A5EE9 /* AppDelegate.swift in Sources */,
 				0423F0E82C0DDC8D005A5EE9 /* SceneDelegate.swift in Sources */,
+				0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */,
+				0423F0FC2C0DE9A7005A5EE9 /* SignupScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +279,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,7 +342,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,6 +363,7 @@
 		};
 		0423F0F72C0DDC8F005A5EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C834D5F7A1C91AD59B1E33E /* Pods-snapKitLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,6 +376,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +392,7 @@
 		};
 		0423F0F82C0DDC8F005A5EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A0AC66C0E3C7790E9E44D2 /* Pods-snapKitLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +405,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
