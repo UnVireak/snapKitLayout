@@ -84,7 +84,8 @@ class SiginScreenViewController: UIViewController {
     
     let emailContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 43/255.0, green: 42/255.0, blue: 60/255.0, alpha: 1.0)
+//        view.backgroundColor = UIColor(red: 43/255.0, green: 42/255.0, blue: 60/255.0, alpha: 1.0)
+        view.backgroundColor = .textFieldCollor
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         return view
@@ -235,6 +236,7 @@ class SiginScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Login"
+        view.backgroundColor = .darkPurple
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         setupView()
     }
@@ -376,13 +378,13 @@ class SiginScreenViewController: UIViewController {
         }
         
         
-        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        sigupButton.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
     }
- @objc func loginButtonTapped(){
+ @objc func signupButtonTapped(){
         let signupScreen = SignupScreenViewController()
 //     signupScreen.modalPresentationStyle = .fullScreen // Optional: set the presentation style
-         present(signupScreen, animated: true, completion: nil)
-//     navigationController?.pushViewController(sinupScreen, animated: true)
+//         present(signupScreen, animated: true, completion: nil)
+     navigationController?.pushViewController(signupScreen, animated: true)
      
       
     }
@@ -395,6 +397,9 @@ extension UIColor {
         return UIColor(red: 75/255.0, green: 0/255.0, blue: 130/255.0, alpha: 1.0)
     }()
     
+    static let textFieldCollor:  UIColor = {
+        return UIColor(red: 43/255.0, green: 42/255.0, blue: 60/255.0, alpha: 1.0)
+    }()
 //    static let lightBle: UIColor = {
 //        return UIColor(red: 0.8, green: 0.85, blue: 1.0, alpha: 1)
 //    }()
