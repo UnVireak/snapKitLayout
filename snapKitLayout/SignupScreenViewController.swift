@@ -11,7 +11,7 @@ class SignupScreenViewController: UIViewController {
     
     let scrollView: UIScrollView = {
         let view = UIScrollView()
-        view.backgroundColor = .darkPurple
+        view.backgroundColor = .systemPink
         return view
     }()
     
