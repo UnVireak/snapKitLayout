@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040964502C16106200BCDEB5 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409644F2C16106200BCDEB5 /* EditNoteViewController.swift */; };
 		0423F0E62C0DDC8D005A5EE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0E52C0DDC8D005A5EE9 /* AppDelegate.swift */; };
 		0423F0E82C0DDC8D005A5EE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0E72C0DDC8D005A5EE9 /* SceneDelegate.swift */; };
 		0423F0EA2C0DDC8D005A5EE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0E92C0DDC8D005A5EE9 /* ViewController.swift */; };
@@ -16,11 +17,13 @@
 		0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */; };
 		0423F0FC2C0DE9A7005A5EE9 /* SignupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */; };
 		04B1E4522C105DAD000684CA /* CollorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E4512C105DAD000684CA /* CollorViewController.swift */; };
+		04BB557F2C14BB0300B85CDF /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */; };
 		04C243D32C13729D0011CC83 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C243D22C13729D0011CC83 /* TableViewController.swift */; };
 		A1EF4D121106204F1EDF435E /* Pods_snapKitLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0409644F2C16106200BCDEB5 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		0423F0E22C0DDC8D005A5EE9 /* snapKitLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snapKitLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0423F0E52C0DDC8D005A5EE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0423F0E72C0DDC8D005A5EE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginScreenViewController.swift; sourceTree = "<group>"; };
 		0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenViewController.swift; sourceTree = "<group>"; };
 		04B1E4512C105DAD000684CA /* CollorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollorViewController.swift; sourceTree = "<group>"; };
+		04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
 		04C243D22C13729D0011CC83 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3C834D5F7A1C91AD59B1E33E /* Pods-snapKitLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snapKitLayout.debug.xcconfig"; path = "Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snapKitLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				04C243D22C13729D0011CC83 /* TableViewController.swift */,
+				04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */,
+				0409644F2C16106200BCDEB5 /* EditNoteViewController.swift */,
 			);
 			name = tableView;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 			files = (
 				0423F0EA2C0DDC8D005A5EE9 /* ViewController.swift in Sources */,
 				04C243D32C13729D0011CC83 /* TableViewController.swift in Sources */,
+				04BB557F2C14BB0300B85CDF /* CreateNoteViewController.swift in Sources */,
 				04B1E4522C105DAD000684CA /* CollorViewController.swift in Sources */,
+				040964502C16106200BCDEB5 /* EditNoteViewController.swift in Sources */,
 				0423F0E62C0DDC8D005A5EE9 /* AppDelegate.swift in Sources */,
 				0423F0E82C0DDC8D005A5EE9 /* SceneDelegate.swift in Sources */,
 				0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */,
