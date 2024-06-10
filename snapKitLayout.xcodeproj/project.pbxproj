@@ -16,9 +16,11 @@
 		0423F0F22C0DDC8F005A5EE9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0423F0F12C0DDC8F005A5EE9 /* Base */; };
 		0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */; };
 		0423F0FC2C0DE9A7005A5EE9 /* SignupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */; };
+		045F7EB02C16F235000C51C0 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F7EAF2C16F235000C51C0 /* TableModel.swift */; };
 		04B1E4522C105DAD000684CA /* CollorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1E4512C105DAD000684CA /* CollorViewController.swift */; };
-		04BB557F2C14BB0300B85CDF /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */; };
-		04C243D32C13729D0011CC83 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C243D22C13729D0011CC83 /* TableViewController.swift */; };
+		04BB557F2C14BB0300B85CDF /* CreateFolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BB557E2C14BB0300B85CDF /* CreateFolderTableViewController.swift */; };
+		04C243D32C13729D0011CC83 /* TableViewFolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C243D22C13729D0011CC83 /* TableViewFolderController.swift */; };
+		04FDB3A32C1704C100794A01 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FDB3A22C1704C100794A01 /* DataManager.swift */; };
 		A1EF4D121106204F1EDF435E /* Pods_snapKitLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +36,11 @@
 		0423F0F32C0DDC8F005A5EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0423F0F92C0DDDCC005A5EE9 /* SiginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginScreenViewController.swift; sourceTree = "<group>"; };
 		0423F0FB2C0DE9A7005A5EE9 /* SignupScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupScreenViewController.swift; sourceTree = "<group>"; };
+		045F7EAF2C16F235000C51C0 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		04B1E4512C105DAD000684CA /* CollorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollorViewController.swift; sourceTree = "<group>"; };
-		04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
-		04C243D22C13729D0011CC83 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		04BB557E2C14BB0300B85CDF /* CreateFolderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderTableViewController.swift; sourceTree = "<group>"; };
+		04C243D22C13729D0011CC83 /* TableViewFolderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewFolderController.swift; sourceTree = "<group>"; };
+		04FDB3A22C1704C100794A01 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3C834D5F7A1C91AD59B1E33E /* Pods-snapKitLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snapKitLayout.debug.xcconfig"; path = "Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		6332D91567B7A44FD43B7296 /* Pods_snapKitLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snapKitLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A0AC66C0E3C7790E9E44D2 /* Pods-snapKitLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snapKitLayout.release.xcconfig"; path = "Target Support Files/Pods-snapKitLayout/Pods-snapKitLayout.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +79,9 @@
 		0423F0E42C0DDC8D005A5EE9 /* snapKitLayout */ = {
 			isa = PBXGroup;
 			children = (
-				04C243D12C13726A0011CC83 /* tableView */,
+				04FDB3A12C17049700794A01 /* dataManager */,
+				045F7EAC2C16F1C7000C51C0 /* model */,
+				04C243D12C13726A0011CC83 /* tableViewFolder */,
 				04B1E4502C105D27000684CA /* colorConfig */,
 				0423F0E52C0DDC8D005A5EE9 /* AppDelegate.swift */,
 				0423F0E72C0DDC8D005A5EE9 /* SceneDelegate.swift */,
@@ -90,6 +96,14 @@
 			path = snapKitLayout;
 			sourceTree = "<group>";
 		};
+		045F7EAC2C16F1C7000C51C0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				045F7EAF2C16F235000C51C0 /* TableModel.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		04B1E4502C105D27000684CA /* colorConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,14 +112,22 @@
 			name = colorConfig;
 			sourceTree = "<group>";
 		};
-		04C243D12C13726A0011CC83 /* tableView */ = {
+		04C243D12C13726A0011CC83 /* tableViewFolder */ = {
 			isa = PBXGroup;
 			children = (
-				04C243D22C13729D0011CC83 /* TableViewController.swift */,
-				04BB557E2C14BB0300B85CDF /* CreateNoteViewController.swift */,
+				04C243D22C13729D0011CC83 /* TableViewFolderController.swift */,
+				04BB557E2C14BB0300B85CDF /* CreateFolderTableViewController.swift */,
 				0409644F2C16106200BCDEB5 /* EditNoteViewController.swift */,
 			);
-			name = tableView;
+			name = tableViewFolder;
+			sourceTree = "<group>";
+		};
+		04FDB3A12C17049700794A01 /* dataManager */ = {
+			isa = PBXGroup;
+			children = (
+				04FDB3A22C1704C100794A01 /* DataManager.swift */,
+			);
+			name = dataManager;
 			sourceTree = "<group>";
 		};
 		4B54E6FA32BC1AE7B3E60389 /* Pods */ = {
@@ -241,12 +263,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0423F0EA2C0DDC8D005A5EE9 /* ViewController.swift in Sources */,
-				04C243D32C13729D0011CC83 /* TableViewController.swift in Sources */,
-				04BB557F2C14BB0300B85CDF /* CreateNoteViewController.swift in Sources */,
+				04C243D32C13729D0011CC83 /* TableViewFolderController.swift in Sources */,
+				04BB557F2C14BB0300B85CDF /* CreateFolderTableViewController.swift in Sources */,
 				04B1E4522C105DAD000684CA /* CollorViewController.swift in Sources */,
+				045F7EB02C16F235000C51C0 /* TableModel.swift in Sources */,
 				040964502C16106200BCDEB5 /* EditNoteViewController.swift in Sources */,
 				0423F0E62C0DDC8D005A5EE9 /* AppDelegate.swift in Sources */,
 				0423F0E82C0DDC8D005A5EE9 /* SceneDelegate.swift in Sources */,
+				04FDB3A32C1704C100794A01 /* DataManager.swift in Sources */,
 				0423F0FA2C0DDDCC005A5EE9 /* SiginScreenViewController.swift in Sources */,
 				0423F0FC2C0DE9A7005A5EE9 /* SignupScreenViewController.swift in Sources */,
 			);
