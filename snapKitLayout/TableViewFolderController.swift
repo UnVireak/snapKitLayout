@@ -12,6 +12,15 @@ class TableViewFolderController: UIViewController {
     var selectedFolder: Folder?
     let tableView = UITableView ()
     var folderNote: [Folder] = []
+    
+    let searchBar: UISearchBar = {
+        let view = UISearchBar()
+//        view.showsCancelButton = true
+        view.frame = CGRect(x: 10, y: 10, width: view.frame.width - 20, height: 60)
+        view.placeholder = "Search Folders"
+                view.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Note"
@@ -34,11 +43,21 @@ class TableViewFolderController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     func setupView(){
-        
+        view.addSubview(searchBar)
+        tableView.tableHeaderView = searchBar
+//        searchBar.snp.makeConstraints{make in
+//            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+//                        make.left.equalTo(view.safeAreaLayoutGuide).offset(20)
+//                        make.right.equalTo(view.safeAreaLayoutGuide).offset(-20)
+//            
+//        }
         view.addSubview(tableView)
-        tableView.snp.makeConstraints{make in
+        tableView.snp.makeConstraints { make in
+//                    make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
+//            make.top.equalTo(searchBar.snp.bottom).offset(20)
             make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
+                }
+       
     }
     
 
@@ -55,23 +74,29 @@ extension TableViewFolderController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let folder = folderNote[indexPath.row]
+        cell.textLabel?.text = "\(folder.title) (\(folder.items.count) items)"
         cell.textLabel?.text = folder.title
+        cell.imageView?.image = UIImage(systemName: "folder")
+        cell.accessoryType = .disclosureIndicator
+//                    cell.imageView?.tintColor = .systemRed
 //        cell.detailTextLabel?.text = folder.detail // Set the detail text label
         return cell
     }
     
     
 }
-extension TableViewFolderController: UITableViewDelegate{}
+extension TableViewFolderController: UITableViewDelegate{
+    
+}
 
 extension TableViewFolderController: CreateFolderTableViewDelegate{
     func saveData(folder: Folder) {
-        func saveData(folder: Folder) {
+        
             DataManager.shared.saveFolder(folder)
             folderNote = DataManager.shared.folders
             tableView.reloadData()
 
-        }
+        
     }
     
     func updateData(folder: Folder) {

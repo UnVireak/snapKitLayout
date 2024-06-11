@@ -20,7 +20,7 @@ class CreateFolderTableViewController: UIViewController, UITextFieldDelegate {
     let textFieldFolder: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter text here"
-        tf.borderStyle = .roundedRect
+        tf.borderStyle = .none
         return tf
     }()
     
