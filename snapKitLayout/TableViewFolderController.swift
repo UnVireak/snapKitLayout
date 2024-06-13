@@ -30,9 +30,9 @@ class TableViewFolderController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         setupView()
-        AddNewRightBarButtonItem ()
+        AddNewRightBarButtonFolder ()
     }
-    func AddNewRightBarButtonItem (){
+    func AddNewRightBarButtonFolder (){
         let doneRightButton = UIBarButtonItem(image: .add, style: .plain, target: self, action: #selector(addButton))
         navigationItem.rightBarButtonItems = [doneRightButton]
     }
@@ -74,7 +74,7 @@ extension TableViewFolderController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let folder = folderNote[indexPath.row]
-        cell.textLabel?.text = "\(folder.title) (\(folder.items.count) items)"
+        cell.detailTextLabel?.text = "\(folder.items.count)"
         cell.textLabel?.text = folder.title
         cell.imageView?.image = UIImage(systemName: "folder")
         cell.accessoryType = .disclosureIndicator
@@ -88,8 +88,13 @@ extension TableViewFolderController: UITableViewDataSource{
 extension TableViewFolderController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let selectedFolder = folderNote[indexPath.row]
+        let viewController = TableViewItemController()
+        viewController.folder = selectedFolder
+        navigationController?.pushViewController(viewController, animated: true)
+             
     }
-    
+
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ [weak self] _, _, complete in
@@ -134,6 +139,13 @@ extension TableViewFolderController: UITableViewDelegate{
         DataManager.shared.removeFolder(at: indexPath.item)
         folderNote.remove(at: indexPath.item)
         tableView.deleteRows(at: [indexPath], with: .none)
+    }
+    
+    @objc func editdata(at indexPath: IndexPath){
+        let viewController = CreateFolderTableViewController()
+        viewController.delegate = self
+           viewController.folder = folderNote[indexPath.row]
+           navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
