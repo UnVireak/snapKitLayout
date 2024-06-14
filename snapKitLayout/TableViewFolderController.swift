@@ -74,7 +74,7 @@ extension TableViewFolderController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let folder = folderNote[indexPath.row]
-        cell.detailTextLabel?.text = "\(folder.items.count)"
+        
         cell.textLabel?.text = folder.title
         cell.imageView?.image = UIImage(systemName: "folder")
         cell.accessoryType = .disclosureIndicator

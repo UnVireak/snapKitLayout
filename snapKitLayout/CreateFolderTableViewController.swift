@@ -17,6 +17,10 @@ class CreateFolderTableViewController: UIViewController, UITextFieldDelegate {
     var delegate: CreateFolderTableViewDelegate?
     var folder: Folder?
     
+    let mainView: UIView = {
+        let view = UIView()
+        return view
+    }()
     let textFieldFolder: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter text here"
@@ -76,10 +80,14 @@ class CreateFolderTableViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setupView() {
-        view.addSubview(textFieldFolder)
+        view.addSubview(mainView)
+        mainView.snp.makeConstraints{make in
+            make.edges.equalTo(view.safeAreaLayoutGuide )
+        }
+       mainView.addSubview(textFieldFolder)
         textFieldFolder.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(30)
-            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalTo(mainView.safeAreaLayoutGuide).offset(30)
+            make.leading.trailing.equalTo(mainView).inset(20)
             make.height.equalTo(40)
         }
         
